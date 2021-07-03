@@ -8,16 +8,14 @@ module "test" {
   namespace = "default"
   rules = [
     {
-      api_groups     = [""]
-      resources      = ["pods"]
-      resource_names = ["foo"]
-      verbs          = ["get", "list", "watch"]
+      api_groups = [""]
+      resources  = ["pods"]
+      verbs      = ["get", "list", "watch"]
     },
     {
-      api_groups     = ["apps"]
-      resources      = ["deployments"]
-      resource_names = ["*"]
-      verbs          = ["get", "list"]
+      api_groups = ["apps"]
+      resources  = ["deployments"]
+      verbs      = ["get", "list"]
     }
   ]
   members = [

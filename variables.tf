@@ -24,7 +24,7 @@ variable "rules" {
   type = list(object({
     api_groups     = list(string)
     resources      = list(string)
-    resource_names = list(string)
+    resource_names = optional(list(string))
     verbs          = list(string)
   }))
 }
